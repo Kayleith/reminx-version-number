@@ -10,7 +10,8 @@ type VersionObject = {
   bundleIdentifier: ?string,
   basestationAppVersion: ?string,
   basestationBuildVersion: ?string,
-  basestationBundleIdentifier: ?string
+  basestationBundleIdentifier: ?string,
+  getVersionName: ?function
 };
 
 const VersionNumber: VersionObject = {
