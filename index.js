@@ -19,7 +19,8 @@ const VersionNumber: VersionObject = {
   bundleIdentifier: RNVersionNumber && RNVersionNumber.bundleIdentifier,
   basestationAppVersion: RNVersionNumber && RNVersionNumber.basestationAppVersion,
   basestationBuildVersion: RNVersionNumber && RNVersionNumber.basestationBuildVersion,
-  basestationBundleIdentifier: RNVersionNumber && RNVersionNumber.basestationBundleIdentifier
+  basestationBundleIdentifier: RNVersionNumber && RNVersionNumber.basestationBundleIdentifier,
+  getVersionName: RNVersionNumber.getVersionName
 };
 
 export default VersionNumber;
