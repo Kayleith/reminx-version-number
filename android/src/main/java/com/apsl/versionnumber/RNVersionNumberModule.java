@@ -53,4 +53,9 @@ public class RNVersionNumberModule extends ReactContextBaseJavaModule {
     }
     return constants;
   }
+  
+  public String getVersionName(String packageName) {
+    PackageManager packageManager = this.reactContext.getPackageManager();
+    return packageManager.getPackageInfo(packageName, 0).versionName;
+  }
 }
