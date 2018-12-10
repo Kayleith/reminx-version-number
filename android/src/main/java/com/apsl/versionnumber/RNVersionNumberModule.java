@@ -20,7 +20,11 @@ public class RNVersionNumberModule extends ReactContextBaseJavaModule {
   private static final String APP_VERSION = "appVersion";
   private static final String APP_BUILD = "buildVersion";
   private static final String APP_ID = "bundleIdentifier";
-
+  
+  private static final String BASESTATION_APP_VERSION = "basestationAppVersion";
+  private static final String BASESTATION_APP_BUILD = "basestationBuildVersion";
+  private static final String BASESTATION_APP_ID = "basestationBundleIdentifier";
+  
   public RNVersionNumberModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
