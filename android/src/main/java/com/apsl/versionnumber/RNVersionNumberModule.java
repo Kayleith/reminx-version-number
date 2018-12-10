@@ -1,10 +1,10 @@
-
 package com.apsl.versionnumber;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -53,16 +53,16 @@ public class RNVersionNumberModule extends ReactContextBaseJavaModule {
     }
     return constants;
   }
-  
+
   @ReactMethod
-  public String getVersionName(String packageName) {
+  public void getVName(final String packageName, final Promise promise)  {
     PackageManager packageManager = this.reactContext.getPackageManager();
-    String versionName = "";
+    String versionName = "1.0.0";
     try {
       versionName = packageManager.getPackageInfo(packageName, 0).versionName;
     } catch (NameNotFoundException e) {
       e.printStackTrace();
     }
-    return versionName;
+    promise.resolve(versionName);
   }
 }
