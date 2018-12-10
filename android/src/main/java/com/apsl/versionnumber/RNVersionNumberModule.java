@@ -36,10 +36,14 @@ public class RNVersionNumberModule extends ReactContextBaseJavaModule {
     final Map<String, Object> constants = new HashMap<>();
     final PackageManager packageManager = this.reactContext.getPackageManager();
     final String packageName = this.reactContext.getPackageName();
+    final String basestationName = "com.dthera.basestation";
     try {
       constants.put(APP_VERSION, packageManager.getPackageInfo(packageName, 0).versionName);
       constants.put(APP_BUILD, packageManager.getPackageInfo(packageName, 0).versionCode);
       constants.put(APP_ID, packageName);
+      constants.put(BASESTATION_APP_VERSION, packageManager.getPackageInfo(basestationName, 0).versionName);
+      constants.put(BASESTATION_APP_BUILD, packageManager.getPackageInfo(basestationName, 0).versionCode);
+      constants.put(BASESTATION_APP_ID, basestationName);
     } catch (NameNotFoundException e) {
       e.printStackTrace();
     }
