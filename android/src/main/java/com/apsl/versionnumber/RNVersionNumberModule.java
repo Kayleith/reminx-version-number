@@ -55,7 +55,7 @@ public class RNVersionNumberModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void getVName(final String packageName, final Promise promise)  {
+  public void getVersionName(final String packageName, final Promise promise)  {
     PackageManager packageManager = this.reactContext.getPackageManager();
     String versionName = "1.0.0";
     try {
